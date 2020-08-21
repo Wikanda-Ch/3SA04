@@ -6,7 +6,8 @@ export default function Forecast(props) {
         <View>
             <Text style = {styles.content}>{props.main}</Text>
             <Text style = {styles.contentone}>{props.description}</Text>
-            <View style={{flexDirection: 'row', padding: 50}}>
+            <View style={{flexDirection: 'row', padding: 30}}>
+                <Text style={{paddingRight: 45}}></Text>
                 <Text style = {styles.contenttwo}>{props.temp}</Text>
                 <Text style = {styles.contentthree}>°C</Text>
             </View>    
