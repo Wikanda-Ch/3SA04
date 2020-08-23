@@ -16,6 +16,8 @@ export default function Forecast(props) {
         break;
         case 'Fog' : img = require('../mist.png') 
         break;
+        default : img = require('../clouds.png')
+        break;
 
     }
 
