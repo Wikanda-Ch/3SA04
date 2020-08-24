@@ -25,7 +25,7 @@ export default function Forecast(props) {
         <View>
             <Text style = {styles.content}>{props.main}</Text>
             <View style={styles.imgIcon}>
-                <Image source={img} style={{width:70,height:70,top:30,left:55}} />
+                <Image source={img} style={{width:70,height:70}} />
             </View>
             <Text style = {styles.contentone}>{props.description}</Text>
 
@@ -48,7 +48,6 @@ export default function Forecast(props) {
            color: 'white'
        },
        contentone:{
-            paddingTop: 30,
             textAlign : 'center',
             fontSize: 25,
             color: 'white'
@@ -63,7 +62,7 @@ export default function Forecast(props) {
             fontSize: 15,
             color: 'white'
         },
-        img:{
+        imgIcon:{
             justifyContent: 'center',
             alignItems: 'center'
         }
