@@ -33,8 +33,8 @@ export default function ZipCodeScreen(){
     return (
         <View>
         <Button
-        style={styles.Button} color="pink" 
-        title="See all Weather in Website"
+        style={styles.Button} color="#9dcbd8" 
+        title="𝐺𝑜 𝑠𝑒𝑒 𝑎𝑙𝑙 𝑡ℎ𝑒 𝑤𝑒𝑎𝑡ℎ𝑒𝑟 ℎ𝑒𝑟𝑒⛅️"
         onPress={() => Linking.openURL("https://weather.com/weather/today/l/7.00,100.48?par=google&temp=c")}
         ></Button>
 

@@ -36,7 +36,7 @@ export default function Forecast(props) {
                 <Text style = {styles.temp}>{props.temp}</Text>
                 <Text style = {styles.c}>°C</Text>
             </View>    
-            <Text style ={styles.temp_m}>Min: {props.temp_min}°C      Max: {props.temp_max}°C</Text>
+            <Text style ={styles.temp_m}>𝑀𝑖𝑛🌡 {props.temp_min}°C           𝑀𝑎𝑥🌡 {props.temp_max}°C</Text>
         </View>
     )
    }
