@@ -23,41 +23,49 @@ export default function Forecast(props) {
 
     return (
         <View>
-            <Text style = {styles.content}>{props.main}</Text>
+            <Text style = {styles.name}>{props.name}{"  /  "}{props.country}</Text>
+
             <View style={styles.imgIcon}>
                 <Image source={img} style={{width:70,height:70}} />
             </View>
-            <Text style = {styles.contentone}>{props.description}</Text>
 
-            <View style={{flexDirection: 'row', padding: 30}}>
-                <Text style={{paddingRight: 22}}></Text>
-                <Text style = {styles.contenttwo}>{props.temp}</Text>
-                <Text style = {styles.contentthree}>°C</Text>
+            <Text style = {styles.main}>{props.main}</Text>
+            <Text style = {styles.description}>{props.description}</Text>
+
+            <View style={{flexDirection: 'row',justifyContent: 'center',padding:20}}>
+                <Text style = {styles.temp}>{props.temp}</Text>
+                <Text style = {styles.c}>°C</Text>
             </View>    
-
+            <Text style ={styles.temp_m}>Min: {props.temp_min}°C      Max: {props.temp_max}°C</Text>
         </View>
     )
    }
 
    const styles = StyleSheet.create({
-       content:{
-           paddingTop: 30,
+       name:{
+            padding: 20,
+            textAlign : 'center',
+            fontSize: 25,
+            fontWeight: 'bold',
+            color: 'white'
+       },
+       main:{
            textAlign : 'center',
            fontSize: 30,
            fontWeight: 'bold',
            color: 'white'
        },
-       contentone:{
+       description:{
             textAlign : 'center',
             fontSize: 25,
             color: 'white'
         },
-        contenttwo:{  
+        temp:{  
             fontSize: 25,
             fontWeight: 'bold',
             color: 'white'
         },
-        contentthree:{
+        c:{
             textAlignVertical: 'center',
             fontSize: 15,
             color: 'white'
@@ -65,6 +73,11 @@ export default function Forecast(props) {
         imgIcon:{
             justifyContent: 'center',
             alignItems: 'center'
+        },
+        temp_m:{
+            textAlign : 'center',
+            color: 'white',
+            fontSize: 15,
         }
 
    })

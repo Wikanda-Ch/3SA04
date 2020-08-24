@@ -6,7 +6,11 @@ export default function Wheather(props){
     const [forecastInfo, setForecastInfo] = useState({
         main: 'main',
         description: 'description',
-        temp: 0
+        temp: 0,
+        temp_min: 0,
+        temp_max: 0,
+        name: 'name',
+        country: 'country'
     })
 
     useEffect(() => {
@@ -18,7 +22,11 @@ export default function Wheather(props){
                 setForecastInfo({
                     main: json.weather[0].main,
                     description: json.weather[0].description,
-                    temp: json.main.temp
+                    temp: json.main.temp,
+                    temp_min: json.main.temp_min,
+                    temp_max: json.main.temp_max,
+                    name: json.name,
+                    country: json.sys.country
                 });
             })
             .catch((error) => {
@@ -48,7 +56,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor : 'black',
         opacity: 0.5, 
-        height: '45%',
+        height: '55%',
         
 
     },
